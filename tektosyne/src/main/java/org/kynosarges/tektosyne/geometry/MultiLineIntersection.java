@@ -731,12 +731,14 @@ public final class MultiLineIntersection {
             }
 
             // update remaining sweep line to prepare for insertion
-            for (int index: sweepLine) {
+            for (int index: new ArrayList<>(sweepLine)) {
                 final double slope = slopes[index];
 
                 if (slope != Double.MAX_VALUE) {
                     final PointD start = lines[index].start;
+                    sweepLine.remove(index);
                     positions[index] = slope * (cursor.y - start.y) + start.x;
+                    sweepLine.add(index);
                 }
             }
 
