@@ -31,7 +31,7 @@ import java.util.*;
  * file gives a detailed description of this comparer.</p>
  * 
  * @author Christoph Nahr
- * @version 6.1.0
+ * @version 6.3.1
  */
 public final class MultiLineIntersection {
     /*
